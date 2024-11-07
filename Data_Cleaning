@@ -1,22 +1,50 @@
-import pandas as pd
-
-# Load the Iris dataset
-df = pd.read_csv('Iris.csv')
-
-# 1. Inspect the dataset
-print("First five rows of the dataset:")
-print(df.head())
-print("\nSummary of missing values:")
-print(df.isnull().sum())
-
-# 2. Handle missing values (if any)
-# For demonstration, we'll fill missing values with the median, although Iris dataset is usually clean
-df.fillna(df.median(), inplace=True)
-
-# 3. Remove duplicates (if any)
-df = df.drop_duplicates()
-
-# Display cleaned data
-print("\nData after cleaning:")
-print(df.info())
-
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import pandas as pd\n",
+    "\n",
+    "# Load the Iris dataset\n",
+    "df = pd.read_csv('Iris.csv')\n",
+    "\n",
+    "# 1. Inspect the dataset\n",
+    "print(\"First five rows of the dataset:\")\n",
+    "print(df.head())\n",
+    "print(\"\\nSummary of missing values:\")\n",
+    "print(df.isnull().sum())\n",
+    "\n",
+    "# 2. Handle missing values (if any)\n",
+    "# For demonstration, we'll fill missing values with the median, although Iris dataset is usually clean\n",
+    "df.fillna(df.median(), inplace=True)\n",
+    "\n",
+    "# 3. Remove duplicates (if any)\n",
+    "df = df.drop_duplicates()\n",
+    "\n",
+    "# Display cleaned data\n",
+    "print(\"\\nData after cleaning:\")\n",
+    "print(df.info())\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 4
+}
